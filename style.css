@@ -1,0 +1,88 @@
+* {
+    box-sizing: content-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+}
+
+h1 {
+    margin: 30px;
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 1.75rem;
+}
+
+.menu {
+    text-align: center;
+}
+
+.item {
+    display: inline-block;
+    background-color: gray;
+    width: 30%;
+    border: 1px solid black;
+    margin: 5px;
+    position: relative;
+    vertical-align: top;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.heading {
+    background-color: yellow;
+    border: 1px solid black;
+    float: right;
+    min-width: 33%;
+    padding: 2px 4px 2px 4px;
+    margin: -1px -1px 20px 0px;
+
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 1.25rem;
+}
+
+#m1 > .heading {
+    background-color: pink;
+}
+
+#m2 > .heading {
+    background-color: red;
+    color: white;
+}
+
+.content {
+    clear: right;
+    margin: 10px;
+
+    font-family: "Times New Roman", Times, serif;
+    text-align: left;
+}
+
+/* LARGE SCREEN is default*/
+
+/* MEDIUM SCREEN  */
+@media (min-width: 768px) and (max-width: 991px) {
+    .item {
+        margin: 1%;
+        width: 45%;
+    }
+
+    #m3 {
+        margin: 1%;
+        width: 93%;
+        height: auto;
+    }
+}
+
+/* SMALL SCREEN */
+@media (max-width: 767px) {
+    .item {
+        display: block;
+        width: 90%;
+        margin: 5%;
+        height: auto;
+    }
+}
